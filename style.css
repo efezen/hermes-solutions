@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+p {
+  margin: 10px 0;
+}
+
+/*navbar*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-color);
+  opacity: 0.8;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  padding: 0 30px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar a {
+  display: flex;
+  color: var(--light-color);
+  padding: 10px 20px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid var(--primary-color);
+}
+/*navbar end*/
+
+/*header*/
+.hero {
+  height: 100vh;
+  background: url(./images/home/showcase.jpg) no-repeat center center/cover;
+  position: relative;
+  color: var(--light-color);
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.hero .content h1 {
+  font-size: 55px;
+  font-weight: 500;
+}
+
+.hero .content .p {
+  font-size: 24px;
+  max-width: 600px;
+  margin: 20px 0 30px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero * {
+  z-index: 10;
+}
+/*header end*/
+
+/*icon section*/
+.icons {
+  padding: 30px;
+}
+
+.icons i {
+  color: var(--light-color);
+  background-color: var(--primary-color);
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  width: 4.5rem;
+  height: 4rem;
+  text-align: center;
+}
+
+.icons h2 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+/*icon section end*/
+
+footer i {
+  padding: 10px 20px;
+}
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+  .flex-columns .row,
+  .flex-items {
+    flex-direction: column;
+  }
+  .flex-items {
+    flex-direction: column;
+  }
+  .cases .row {
+    flex-direction: column !important;
+  }
+  .cases .row .column {
+    width: 100%;
+    max-width: 100%;
+  }
+}
